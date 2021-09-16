@@ -22,7 +22,7 @@ export const Nav = () => {
   ]
 
   return (
-    <nav className="nav nav-pills nav-justified">
+    <nav className="bg-light nav nav-pills nav-justified">
      {tabs.map((tab) => (
           <NavItem key={tab.link} tabinfo={tab}/>
         ))}
