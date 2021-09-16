@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MovieService } from '../api/MoviesService';
-import { Movie } from '../Components/Movie';
+import { MovieList } from '../Components/MovieList';
 
 export const TopRated = () => {
   const [movies, setMovies] = useState([]);
@@ -18,13 +18,7 @@ export const TopRated = () => {
   }, []);
   return (
     <div className="container">
-      <div className="row gy-5">
-        {movies.map((movie) => (
-          <div key={movie.id} className="col-3">
-            <Movie movie={movie}/>
-          </div>
-        ))}
-      </div>
+      <MovieList movies={movies} />
     </div>
   );
 };
