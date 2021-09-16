@@ -6,8 +6,20 @@ const BASE_URL = 'https://api.themoviedb.org/3/'
 const withBaseUrl = (path) => `${BASE_URL}${path}?api_key=${API_KEY}`
 
 export class MovieService {
-    static getMovies() {
+    static getPopularMovies() {
         return axios(withBaseUrl('movie/popular'))
+    }
+
+    static getNowPlayingMovies() {
+        return axios(withBaseUrl('movie/now_playing'))
+    }
+
+    static getTopRatedMovies() {
+        return axios(withBaseUrl('movie/top_rated'))
+    }
+
+    static getUpcomingMovies() {
+        return axios(withBaseUrl('movie/upcoming'))
     }
     
     static getMovieDetail(id) {

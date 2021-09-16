@@ -5,16 +5,16 @@ import { Movie } from '../Components/Movie';
 export const Home = () => {
   const [movies, setMovies] = useState([]);
 
-  const getMovies = async () => {
+  const getPopularMovies = async () => {
     const {
       data: { results },
-    } = await MovieService.getMovies();
+    } = await MovieService.getPopularMovies();
 
     setMovies(results);
   };
 
   useEffect(() => {
-    getMovies();
+    getPopularMovies();
   }, []);
   return (
     <div className="container">
