@@ -18,6 +18,10 @@ export const Nav = () => {
     {
       link: '/upcoming',
       name: 'Upcoming'
+    },
+    {
+      link: '/favorites',
+      name: 'My Favorites'
     }
   ]
 
